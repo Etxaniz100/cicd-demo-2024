@@ -1,2 +1,2 @@
 print("Imprimiendo dinero...")
-print("Imprimiendo" + 500 + "€")
+print("Imprimiendo" + str(500) + "€")
