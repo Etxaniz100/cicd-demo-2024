@@ -7,9 +7,11 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Mostrar mensaje
-        run: echo "Hola github Actions (0-0)"
       - name: Bajase codigo
         uses: actions/checkout@v4
       - name: Probar codigo
         run: python3 main.py
+      - name: Crear imagen Docker
+        run: docker build -t eneko/holamundo .
+      - name: Probar contenedor
+        run: docker run eneko/holamundo
